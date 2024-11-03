@@ -23,8 +23,6 @@ class Pilha:
         return self.topo + 1
 
 
-
-
 def inserirCodigos(pilha):
     for i in range(100):
         pilha.push(i)
@@ -36,10 +34,18 @@ def contarImpares(pilha):
             cont += 1
     return cont
 
+def contarPares(pilha):
+    cont = 0
+    for i in range(pilha.size()):
+        if pilha.itens[i] % 2 != 0:
+            cont += 1
+    return cont
+
 def __main__():
     pilha = Pilha()
     inserirCodigos(pilha)
     print(contarImpares(pilha))
+    print(contarPares(pilha))
 
 
 __main__()
